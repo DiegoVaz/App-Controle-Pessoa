@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "./resources/js/over.js"
+    },
+    "designerId": "39156ee9-14be-49b1-89f6-5fe9fa99697c"
+}

@@ -1,0 +1,79 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Pessoa"
+    },
+    "designerId": "00607b66-1884-49a7-8202-5fae5d56f1e8",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nome",
+                "type": "string"
+            },
+            "designerId": "7f5e614e-58f3-4b92-8ce5-02ad06abc880"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cpf",
+                "type": "string"
+            },
+            "designerId": "458b1104-ca36-474d-92d0-051fe7f4d74a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "telefone",
+                "type": "string"
+            },
+            "designerId": "2572587f-d53d-4454-8b57-bbdc59a6ba75"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "auto"
+            },
+            "designerId": "0c9b8af1-9041-42e6-8d13-efbee3e0a900"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "img",
+                "type": "string"
+            },
+            "designerId": "8799fbc8-9011-43c0-b50a-acfd6b2cf942"
+        }
+    ]
+}

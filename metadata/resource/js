@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "./resources/js/firebase.js"
+    },
+    "designerId": "ae1ad8ba-a80d-4227-840b-b7e1e517fe18"
+}

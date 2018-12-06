@@ -1,0 +1,478 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "Viewport",
+        "layout": "fit"
+    },
+    "designerId": "022c17a0-2ad5-4260-a8f2-9be6d3fd0a0b",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "fbAuth.onAuthStateChanged(function(user) {\r",
+                    "    if (user) {\r",
+                    "        var comp = Ext.ComponentQuery.query('#modalLogin')[0];\r",
+                    "        if(comp){\r",
+                    "            comp.close();\r",
+                    "        }\r",
+                    "    }else{\r",
+                    "        Ext.create('AppLogin.view.modalLogin', {}).show();\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "designerId": "caa70971-806b-4a30-9d93-196784da351c"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "layout": "fit",
+                "padding": 50,
+                "title": "Lista de pessoas",
+                "titleAlign": "center"
+            },
+            "designerId": "f8201348-a1f4-4352-892b-ead9dca47465",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Field",
+                        "layout": "fit",
+                        "padding": 0,
+                        "title": null
+                    },
+                    "designerId": "0ef33d5e-3cab-409f-a4a1-0199a190d486",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "frame": null,
+                                "padding": null,
+                                "store": "PessoaStore",
+                                "title": null,
+                                "titleAlign": "center"
+                            },
+                            "designerId": "a776032c-7625-45dd-a33d-33bb8266e43d",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "floating": null,
+                                        "frame": true,
+                                        "height": null,
+                                        "width": null
+                                    },
+                                    "designerId": "ae321fe0-340c-40f8-abbb-5f2e40650215"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "nome",
+                                        "draggable": false,
+                                        "flex": 1,
+                                        "menuDisabled": true,
+                                        "resizable": false,
+                                        "sortable": true,
+                                        "text": "Nome"
+                                    },
+                                    "designerId": "f1d3c324-27ba-4f73-b574-a384555fc622"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "cpf",
+                                        "draggable": false,
+                                        "flex": 1,
+                                        "menuDisabled": true,
+                                        "resizable": false,
+                                        "sortable": false,
+                                        "text": "CPF"
+                                    },
+                                    "designerId": "2009b322-41e2-462b-82bd-a0b235602471"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "telefone",
+                                        "draggable": false,
+                                        "flex": 1,
+                                        "menuDisabled": true,
+                                        "resizable": false,
+                                        "sortable": false,
+                                        "text": "Celular"
+                                    },
+                                    "designerId": "5188953c-8a17-47c9-ab38-e9d797eeb15a"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Action",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "editar",
+                                        "draggable": false,
+                                        "itemId": "iconEditar",
+                                        "menuDisabled": true,
+                                        "resizable": false,
+                                        "width": 32
+                                    },
+                                    "designerId": "2222ad0a-3ebe-4b2f-a086-067743689357",
+                                    "cn": [
+                                        {
+                                            "type": "actioncolumnitem",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "editarColumn"
+                                            },
+                                            "designerId": "82d74549-a051-414d-b933-9428d32d5763",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "v",
+                                                            "metadata",
+                                                            "r",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "store"
+                                                        ],
+                                                        "fn": "getClass",
+                                                        "implHandler": [
+                                                            "return 'icon-pencil icon';"
+                                                        ]
+                                                    },
+                                                    "designerId": "466e8e71-e4b4-4fe3-b4d1-66e027094969"
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "view",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "item",
+                                                            "e",
+                                                            "record",
+                                                            "row"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var modal = Ext.create('AppLogin.view.addPessoa', {\r",
+                                                            "    itemId: \"modalEditarPessoa\"\r",
+                                                            "});\r",
+                                                            "\r",
+                                                            "modal.show();\r",
+                                                            "modal.setTitle('Atualizar pessoa');\r",
+                                                            "Ext.ComponentQuery.query('#btnAdicionar')[0].setVisible(false);\r",
+                                                            "Ext.ComponentQuery.query('#btnAtualizar')[0].setVisible(true);\r",
+                                                            "Ext.ComponentQuery.query('#name')[0].setAllow\r",
+                                                            "Ext.ComponentQuery.query('#name')[0].setVisible(false);\r",
+                                                            "Ext.ComponentQuery.query('#formAdd')[0].loadRecord(record);\r",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "designerId": "ed863771-6516-4cd1-a81b-a7ae16b0c797"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Action",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "excluir",
+                                        "disabled": true,
+                                        "draggable": false,
+                                        "resizable": false,
+                                        "width": 32
+                                    },
+                                    "designerId": "acfb8cd5-e65c-4916-a25a-e449c08bdf3d",
+                                    "cn": [
+                                        {
+                                            "type": "actioncolumnitem",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "excluirColumn"
+                                            },
+                                            "designerId": "2398dcac-e356-4033-9c6a-13437ea01f3d",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "v",
+                                                            "metadata",
+                                                            "r",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "store"
+                                                        ],
+                                                        "fn": "getClass",
+                                                        "implHandler": [
+                                                            "return \"icon-bin icon\";"
+                                                        ]
+                                                    },
+                                                    "designerId": "d3cd1c79-1da7-49a2-bbef-396ff91c1aea"
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "view",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "item",
+                                                            "e",
+                                                            "record",
+                                                            "row"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "AppLogin.controller.Firebase.ExcluirDados(\"Pessoa\", record.data.id);\r",
+                                                            "AppLogin.controller.Firebase.ExcluirArquivo(record.data.img);\r",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "designerId": "74897b99-2b55-4375-a14f-f8d4d01e5fc8"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|pack": "end",
+                                        "designer|displayName": "ToolbarAdd",
+                                        "dock": "bottom"
+                                    },
+                                    "designerId": "4e42d3fa-1614-4a8e-ae1a-07c98cd29e28",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "border": true,
+                                                "cls": "btn-adicionar",
+                                                "height": 40,
+                                                "layout|flex": 0,
+                                                "text": "Adicionar",
+                                                "width": 200
+                                            },
+                                            "designerId": "a48c48fa-5dd7-43d1-87b2-ea7651665e09",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick",
+                                                        "implHandler": [
+                                                            "Ext.create('AppLogin.view.addPessoa', {\r",
+                                                            "    itemId: \"modalAddPessoa\"\r",
+                                                            "}).show();\r",
+                                                            "Ext.ComponentQuery.query('#btnAtualizar')[0].setVisible(false);\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "084d2304-6ae3-4899-b878-59f566b18837"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelAfterRender",
+                                        "implHandler": [
+                                            "var pessoas = AppLogin.controller.Firebase.ListaDados(\"Pessoa\", function(data){\r",
+                                            "    component.store.loadData(data);\r",
+                                            "});"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "e7b0b56d-7fc6-4b23-aecb-8e6cb7657e4b"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelect",
+                                        "implHandler": [
+                                            "var modal = Ext.create('AppLogin.view.modalImagem', {\r",
+                                            "    itemId: 'modalImagem'\r",
+                                            "}).show();\r",
+                                            "\r",
+                                            "AppLogin.controller.Firebase.BuscarArquivo(record.data.img, function(url){\r",
+                                            "    modal.setImg(url.toString());\r",
+                                            "}, function(error){\r",
+                                            "    Ext.Msg.alert('Status', 'Erro ao carregar imagem. Tente novamente!');\r",
+                                            "    modal.close();\r",
+                                            "});"
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "bcc89968-a2b1-4f79-8e51-11d30f4f716f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "type": "close"
+                    },
+                    "designerId": "70f271fe-c09f-4120-b608-a0087599b6cf",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "event",
+                                    "toolEl",
+                                    "owner",
+                                    "tool"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "firebase.auth().signOut().then(function() {\r",
+                                    "    localStorage.removeItem(\"login\");\r",
+                                    "    Ext.create('AppLogin.view.modalLogin', {}).show();\r",
+                                    "}).catch(function(error) {\r",
+                                    "    // An error happened.\r",
+                                    "});"
+                                ]
+                            },
+                            "designerId": "3f2b63fc-bafa-4da3-b52d-263d7710efd8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

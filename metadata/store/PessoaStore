@@ -1,0 +1,14 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PessoaStore",
+        "model": "Pessoa",
+        "storeId": "PessoaStore"
+    },
+    "designerId": "452330eb-7528-4f61-a534-864f4e9c300b"
+}

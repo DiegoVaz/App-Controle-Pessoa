@@ -1,0 +1,378 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "addPessoa",
+        "height": 222,
+        "id": "addPessoa",
+        "itemId": null,
+        "modal": true,
+        "title": "Adicionar nova pessoa",
+        "titleAlign": "center",
+        "width": 391
+    },
+    "designerId": "2ee3fc6d-915e-47e4-87b4-2da12d0d2c92",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|displayName": "FormAdicionar",
+                "itemId": "formAdd",
+                "title": "",
+                "titleAlign": "center"
+            },
+            "designerId": "20819c2c-56c8-4ce8-9c88-cf37b68ecf2e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "id",
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "designerId": "b56f2f51-874f-44b1-b7e5-21e4b9f1ba89"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "itemId": "file",
+                        "layout|anchor": "100%",
+                        "name": null
+                    },
+                    "designerId": "aab8bacc-046a-4b59-ac03-c789c955f6b3"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "designer|displayName": "nome",
+                        "fieldLabel": "Nome",
+                        "itemId": "nome",
+                        "layout|anchor": "100%",
+                        "name": "nome"
+                    },
+                    "designerId": "f9da818f-fcd2-49c3-bc79-e10c69c7b1b2"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "designer|displayName": null,
+                        "enableKeyEvents": true,
+                        "fieldLabel": "CPF",
+                        "inputType": null,
+                        "itemId": "cpf",
+                        "layout|anchor": "100%",
+                        "maxLength": 14,
+                        "maxLengthText": "The maximum length for this field is {14}",
+                        "minLength": 11,
+                        "minLengthText": "The minimum length for this field is {11}",
+                        "name": "cpf",
+                        "width": null
+                    },
+                    "designerId": "c53b64be-6b78-44b6-9bbc-fa969ceecfe7",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCpfBlur",
+                                "implHandler": [
+                                    "component.setValue(component.value.replace(/^(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, \"$1.$2.$3-$4\"));\r",
+                                    ""
+                                ],
+                                "name": "blur",
+                                "scope": "me"
+                            },
+                            "designerId": "9630953c-97c5-4422-b8a9-b101cbca10da"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCpfKeypress",
+                                "implHandler": [
+                                    "if (textfield.value){\r",
+                                    "   textfield.setValue(textfield.value.replace(/[^0-9]/g, \"\")); \r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "keypress",
+                                "scope": "me"
+                            },
+                            "designerId": "a07f7434-7dc9-4edb-bbd9-09f334195b33"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "designer|displayName": "telefone",
+                        "enableKeyEvents": true,
+                        "fieldLabel": "Telefone",
+                        "inputType": null,
+                        "itemId": "telefone",
+                        "layout|anchor": "100%",
+                        "maxLength": 15,
+                        "maxLengthText": "The maximum length for this field is {15}",
+                        "minLength": 15,
+                        "minLengthText": "The minimum length for this field is {15}",
+                        "name": "telefone"
+                    },
+                    "designerId": "3b50e31e-1cce-4ba1-8262-88d731ad299d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTelefoneBlur",
+                                "implHandler": [
+                                    "component.setValue(component.value.replace(/^(\\d{2})(\\d{5})(\\d{4})/, \"($1) $2-$3\"));"
+                                ],
+                                "name": "blur",
+                                "scope": "me"
+                            },
+                            "designerId": "852fb294-5405-4509-94ed-7f03014b25be"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTelefoneKeypress",
+                                "implHandler": [
+                                    "if (textfield.value){\r",
+                                    "   textfield.setValue(textfield.value.replace(/[^0-9]/g, \"\"));\r",
+                                    "}"
+                                ],
+                                "name": "keypress",
+                                "scope": "me"
+                            },
+                            "designerId": "16f549c2-10ec-42c0-9e58-492a6fc0ffec"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "buttonText": "Procurar",
+                        "designer|displayName": "img",
+                        "fieldLabel": "Imagem:",
+                        "itemId": "name",
+                        "layout|anchor": "100%",
+                        "name": null
+                    },
+                    "designerId": "eb060538-30a2-4308-a914-13c90d82c159",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNameDirtyChange",
+                                "implHandler": [
+                                    "Ext.ComponentQuery.query('#file')[0].file = field.fileInputEl.dom.files[0];"
+                                ],
+                                "name": "dirtychange",
+                                "scope": "me"
+                            },
+                            "designerId": "9c3259dd-c9cf-4f00-bbab-0f7737d04e93"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "end",
+                        "designer|displayName": "ToolbarAdicionar",
+                        "dock": "bottom",
+                        "itemId": null
+                    },
+                    "designerId": "fbe697ef-b8f7-4bef-8632-77e9b444ec24",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "btnAdicionar",
+                                "layout|flex": null,
+                                "text": "Adicionar"
+                            },
+                            "designerId": "02818e9c-591e-426f-8dd6-9321203a7ae1",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var form = Ext.ComponentQuery.query('#formAdd')[0];\r",
+                                            "var modal = Ext.ComponentQuery.query('#modalAddPessoa')[0];\r",
+                                            "\r",
+                                            "modal.el.mask(\"Salvando\");\r",
+                                            "\r",
+                                            "if (form.isValid()){\r",
+                                            "    var dados = form.getValues();\r",
+                                            "    var file = Ext.ComponentQuery.query('#file')[0].file;\r",
+                                            "    var type = file.name.split('.');\r",
+                                            "\r",
+                                            "    dados.img = Date.now() + '.' + type[type.length - 1];\r",
+                                            "\r",
+                                            "    var ref = fbStorage.ref().child(dados.img);\r",
+                                            "\r",
+                                            "    ref.put(file).then(function(snapshot) {\r",
+                                            "        console.log('Uploaded a blob or file!');\r",
+                                            "\r",
+                                            "        fbFirestore.collection(\"Pessoa\").add({\r",
+                                            "            nome: dados.nome,\r",
+                                            "            cpf: dados.cpf,\r",
+                                            "            telefone: dados.telefone,\r",
+                                            "            img: dados.img\r",
+                                            "        });\r",
+                                            "        modal.close();\r",
+                                            "        Ext.Msg.alert('Sucesso', 'Salvo com sucesso');\r",
+                                            "    }).catch(function(erro) {\r",
+                                            "        modal.el.unmask();\r",
+                                            "        Ext.Msg.alert('Sucesso', 'Erro ao salvar, tente novamente.');\r",
+                                            "    });\r",
+                                            "} else {\r",
+                                            "    modal.el.unmask();\r",
+                                            "    Ext.Msg.alert('Status', 'Preencha os campos corretamente');\r",
+                                            "}\r",
+                                            "\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "7be71ae7-88cb-4e1a-a9d9-2dd135afe8fe"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "btnAtualizar",
+                                "itemId": "btnAtualizar",
+                                "layout|flex": null,
+                                "text": "Atualizar"
+                            },
+                            "designerId": "73b7cc05-f4fa-4ced-8567-d29ecb3c1082",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnAtualizarClick",
+                                        "implHandler": [
+                                            "var form = Ext.ComponentQuery.query('#formAdd')[0];\r",
+                                            "var dados = form.getValues();\r",
+                                            "var docId = dados.id;\r",
+                                            "var dadosImg = dados.img;\r",
+                                            "\r",
+                                            "delete dados.id;\r",
+                                            "\r",
+                                            "if (form.isValid()){\r",
+                                            "    var dados = form.getValues();\r",
+                                            "    fbFirestore.collection(\"Pessoa\").doc(docId).update(dados);\r",
+                                            "    Ext.ComponentQuery.query('#modalEditarPessoa')[0].close();\r",
+                                            "} else {\r",
+                                            "    Ext.Msg.alert('Status', 'Preencha os campos corretamente');\r",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "85cc3a2f-1f3d-4320-89c4-bb67383dc364"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

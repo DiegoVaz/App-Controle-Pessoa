@@ -1,0 +1,8 @@
+{
+   "name": "AppLogin",
+   "requires": [],
+   "id": "b72a3b0b-bd98-4f53-a9b7-8f6e634a6967",
+   "resources": [
+      "./resources/css/style.css"
+   ]
+}

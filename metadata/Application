@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Request",
+            "Firebase"
+        ],
+        "models": [
+            "Pessoa"
+        ],
+        "name": "AppLogin",
+        "stores": [
+            "PessoaStore"
+        ],
+        "uses": [
+            "Ext.window.Window",
+            "Ext.Loader",
+            "Ext.layout.container.Border",
+            "Ext.layout.container.Column",
+            "Ext.util.Point"
+        ],
+        "views": [
+            "MyViewport",
+            "modalLogin",
+            "addPessoa",
+            "modalImagem"
+        ]
+    },
+    "designerId": "application"
+}

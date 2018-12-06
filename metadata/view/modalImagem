@@ -1,0 +1,76 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 0,
+        "designer|userClassName": "modalImagem",
+        "height": 400,
+        "layout": "fit",
+        "minHeight": null,
+        "minWidth": null,
+        "modal": true,
+        "padding": null,
+        "title": "Imagem",
+        "titleAlign": "center",
+        "width": 600
+    },
+    "designerId": "336edcf4-e3e3-41f4-a6ef-08ab2fdcd1f7",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "hidden": true,
+                "itemId": "modalImg",
+                "width": null
+            },
+            "designerId": "7a5e5c54-ca5e-4d94-b2d0-3b131615affa"
+        },
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "load",
+                "text": "Carregando..."
+            },
+            "designerId": "67bfde1b-7a89-46b7-8303-20c3c1fc5781"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "url"
+                ],
+                "fn": "setImg",
+                "implHandler": [
+                    "var comp = Ext.ComponentQuery.query('#modalImg')[0];\r",
+                    "comp.setSrc(url);\r",
+                    "\r",
+                    "setTimeout(function(){\r",
+                    "    Ext.ComponentQuery.query('#load')[0].setVisible(false);\r",
+                    "    comp.setVisible(true);\r",
+                    "}, 800);"
+                ]
+            },
+            "designerId": "0367ac41-a1eb-4039-b921-dd08b6c79617"
+        }
+    ]
+}

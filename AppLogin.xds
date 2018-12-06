@@ -1,0 +1,65 @@
+{
+    "name": "AppLogin",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "4.2.1.883"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        },
+        "displayfield-ExtBox1-1390-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.1",
+    "xdsBuild": 1343,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "022c17a0-2ad5-4260-a8f2-9be6d3fd0a0b",
+            "68079a0d-c11f-49a9-9825-17782c4c827a",
+            "2ee3fc6d-915e-47e4-87b4-2da12d0d2c92",
+            "336edcf4-e3e3-41f4-a6ef-08ab2fdcd1f7"
+        ],
+        "store": [
+            "452330eb-7528-4f61-a534-864f4e9c300b"
+        ],
+        "controller": [
+            "425bf701-227f-4854-8f4d-bb9f0280983f",
+            "4b12ef08-5a52-4f95-81f4-d53aec8cf845"
+        ],
+        "model": [
+            "00607b66-1884-49a7-8202-5fae5d56f1e8"
+        ],
+        "resource": [
+            "4cea3050-f7bd-488a-b62f-c3d2b042ac34",
+            "99898161-e4aa-48ae-9f9b-34521d6f9436",
+            "8567d996-f935-4764-b0d8-e92a31c5803f",
+            "39156ee9-14be-49b1-89f6-5fe9fa99697c",
+            "ae1ad8ba-a80d-4227-840b-b7e1e517fe18"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

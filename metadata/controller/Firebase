@@ -1,0 +1,157 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Firebase"
+    },
+    "designerId": "4b12ef08-5a52-4f95-81f4-d53aec8cf845",
+    "cn": [
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "collection",
+                    "fn"
+                ],
+                "fn": "ListaDados",
+                "implHandler": [
+                    "fbFirestore.collection(collection).onSnapshot(function(list) {\r",
+                    "    var data = [];\r",
+                    "\r",
+                    "    list.forEach(function(obj){\r",
+                    "        var dados = obj.data();\r",
+                    "        dados.id = obj.id;\r",
+                    "        data.push(dados);\r",
+                    "    });\r",
+                    "\r",
+                    "    if(fn){\r",
+                    "        fn(data);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "5754fdcd-b44a-4bad-88c7-487b799175b6"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "name",
+                    "fnSuccess",
+                    "fnFailure"
+                ],
+                "fn": "BuscarArquivo",
+                "implHandler": [
+                    "fbStorage.ref(name).getDownloadURL().then(function(url) {\r",
+                    "    if(fnSuccess){\r",
+                    "        fnSuccess(url);\r",
+                    "    }\r",
+                    "}).catch(function(erro){\r",
+                    "    if(fnSuccess){\r",
+                    "        fnSuccess(erro);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "b097d267-8902-46d9-a1b5-260f7cfeffed"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SalvarDados",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "5447d088-2035-4e83-8827-40ebbf91d988"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SalvarArquivo",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "c7b1a887-2612-43bd-8dc6-0a395026dc72"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "EditarDados",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "8f63f511-9236-419e-9270-866d7432a4a1"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "collection",
+                    "id"
+                ],
+                "fn": "ExcluirDados",
+                "implHandler": [
+                    "fbFirestore.collection(collection).doc(id).delete();"
+                ]
+            },
+            "designerId": "a1be4f6c-9bd8-4f13-8334-da7bda02c3c1"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "id"
+                ],
+                "fn": "ExcluirArquivo",
+                "implHandler": [
+                    "var ref = fbStorage.ref();\r",
+                    "\r",
+                    "ref.child(id).delete();"
+                ]
+            },
+            "designerId": "e6acdb6a-c66b-485a-97bd-0776fa0a3e31"
+        }
+    ]
+}
